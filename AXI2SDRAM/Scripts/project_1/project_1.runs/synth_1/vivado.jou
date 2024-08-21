@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Aug 14 07:12:20 2024
+# Process ID: 208564
+# Current directory: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/project_1/project_1.runs/synth_1
+# Command line: vivado -log AXI2SDRAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI2SDRAM.tcl
+# Log file: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/project_1/project_1.runs/synth_1/AXI2SDRAM.vds
+# Journal file: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source AXI2SDRAM.tcl -notrace

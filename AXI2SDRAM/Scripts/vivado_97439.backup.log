@@ -1,0 +1,446 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Aug 16 06:25:42 2024
+# Process ID: 97439
+# Current directory: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts
+# Command line: vivado
+# Log file: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/vivado.log
+# Journal file: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project design_axi2sdaram /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/design_axi2sdaram -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'.
+add_files -norecurse {/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: AXI2SDRAM
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+WARNING: [Synth 8-2490] overwriting previous definition of module AXIL_Slave_FSM [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module FIFO [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module sdram_controller [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-2490] overwriting previous definition of module fifo_sdram_cntrl [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7115.285 ; gain = 208.609 ; free physical = 775 ; free virtual = 11105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118]
+WARNING: [Synth 8-6014] Unused sequential element reg_wdata_reg was removed.  [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+	Parameter DATA_SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-7023] instance 'FIFO_inst' of module 'FIFO' has 33 connections declared, but only 29 given [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:161]
+INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+WARNING: [Synth 8-689] width (1) of port connection 'wr_addr' does not match port width (24) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:229]
+WARNING: [Synth 8-689] width (1) of port connection 'wr_data' does not match port width (16) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:230]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_addr' does not match port width (24) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:233]
+INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+	Parameter ROW_WIDTH bound to: 13 - type: integer 
+	Parameter COL_WIDTH bound to: 9 - type: integer 
+	Parameter BANK_WIDTH bound to: 2 - type: integer 
+	Parameter SDRADDR_WIDTH bound to: 13 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+	Parameter CLK_FREQUENCY bound to: 133 - type: integer 
+	Parameter REFRESH_TIME bound to: 32 - type: integer 
+	Parameter REFRESH_COUNT bound to: 8192 - type: integer 
+	Parameter CYCLES_BETWEEN_REFRESH bound to: 519 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter INIT_NOP1 bound to: 5'b01000 
+	Parameter INIT_PRE1 bound to: 5'b01001 
+	Parameter INIT_NOP1_1 bound to: 5'b00101 
+	Parameter INIT_REF1 bound to: 5'b01010 
+	Parameter INIT_NOP2 bound to: 5'b01011 
+	Parameter INIT_REF2 bound to: 5'b01100 
+	Parameter INIT_NOP3 bound to: 5'b01101 
+	Parameter INIT_LOAD bound to: 5'b01110 
+	Parameter INIT_NOP4 bound to: 5'b01111 
+	Parameter REF_PRE bound to: 5'b00001 
+	Parameter REF_NOP1 bound to: 5'b00010 
+	Parameter REF_REF bound to: 5'b00011 
+	Parameter REF_NOP2 bound to: 5'b00100 
+	Parameter READ_ACT bound to: 5'b10000 
+	Parameter READ_NOP1 bound to: 5'b10001 
+	Parameter READ_CAS bound to: 5'b10010 
+	Parameter READ_NOP2 bound to: 5'b10011 
+	Parameter READ_READ bound to: 5'b10100 
+	Parameter WRIT_ACT bound to: 5'b11000 
+	Parameter WRIT_NOP1 bound to: 5'b11001 
+	Parameter WRIT_CAS bound to: 5'b11010 
+	Parameter WRIT_NOP2 bound to: 5'b11011 
+	Parameter CMD_PALL bound to: 8'b10010001 
+	Parameter CMD_REF bound to: 8'b10001000 
+	Parameter CMD_NOP bound to: 8'b10111000 
+	Parameter CMD_MRS bound to: 8'b1000000x 
+	Parameter CMD_BACT bound to: 8'b10011xxx 
+	Parameter CMD_READ bound to: 8'b10101xx1 
+	Parameter CMD_WRIT bound to: 8'b10100xx1 
+INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_data' does not match port width (16) of module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:253]
+WARNING: [Synth 8-3848] Net SD_clk in module/entity AXI2SDRAM does not have driver. [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:201]
+INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WDATA_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RDATA_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_EMPTY
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7151.160 ; gain = 244.484 ; free physical = 818 ; free virtual = 11149
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7168.973 ; gain = 262.297 ; free physical = 816 ; free virtual = 11146
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7168.973 ; gain = 262.297 ; free physical = 816 ; free virtual = 11146
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7168.973 ; gain = 0.000 ; free physical = 808 ; free virtual = 11138
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7333.754 ; gain = 0.000 ; free physical = 724 ; free virtual = 11055
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 7457.078 ; gain = 550.402 ; free physical = 581 ; free virtual = 10923
+21 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 7457.078 ; gain = 805.254 ; free physical = 578 ; free virtual = 10923
+refresh_design
+WARNING: [Synth 8-2490] overwriting previous definition of module AXIL_Slave_FSM [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module FIFO [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module sdram_controller [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-2490] overwriting previous definition of module fifo_sdram_cntrl [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 581 ; free virtual = 10919
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118]
+WARNING: [Synth 8-6014] Unused sequential element reg_wdata_reg was removed.  [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+	Parameter DATA_SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-7023] instance 'FIFO_inst' of module 'FIFO' has 33 connections declared, but only 29 given [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:161]
+INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+WARNING: [Synth 8-689] width (1) of port connection 'wr_addr' does not match port width (24) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:229]
+WARNING: [Synth 8-689] width (1) of port connection 'wr_data' does not match port width (16) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:230]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_addr' does not match port width (24) of module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:233]
+INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+	Parameter ROW_WIDTH bound to: 13 - type: integer 
+	Parameter COL_WIDTH bound to: 9 - type: integer 
+	Parameter BANK_WIDTH bound to: 2 - type: integer 
+	Parameter SDRADDR_WIDTH bound to: 13 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+	Parameter CLK_FREQUENCY bound to: 133 - type: integer 
+	Parameter REFRESH_TIME bound to: 32 - type: integer 
+	Parameter REFRESH_COUNT bound to: 8192 - type: integer 
+	Parameter CYCLES_BETWEEN_REFRESH bound to: 519 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter INIT_NOP1 bound to: 5'b01000 
+	Parameter INIT_PRE1 bound to: 5'b01001 
+	Parameter INIT_NOP1_1 bound to: 5'b00101 
+	Parameter INIT_REF1 bound to: 5'b01010 
+	Parameter INIT_NOP2 bound to: 5'b01011 
+	Parameter INIT_REF2 bound to: 5'b01100 
+	Parameter INIT_NOP3 bound to: 5'b01101 
+	Parameter INIT_LOAD bound to: 5'b01110 
+	Parameter INIT_NOP4 bound to: 5'b01111 
+	Parameter REF_PRE bound to: 5'b00001 
+	Parameter REF_NOP1 bound to: 5'b00010 
+	Parameter REF_REF bound to: 5'b00011 
+	Parameter REF_NOP2 bound to: 5'b00100 
+	Parameter READ_ACT bound to: 5'b10000 
+	Parameter READ_NOP1 bound to: 5'b10001 
+	Parameter READ_CAS bound to: 5'b10010 
+	Parameter READ_NOP2 bound to: 5'b10011 
+	Parameter READ_READ bound to: 5'b10100 
+	Parameter WRIT_ACT bound to: 5'b11000 
+	Parameter WRIT_NOP1 bound to: 5'b11001 
+	Parameter WRIT_CAS bound to: 5'b11010 
+	Parameter WRIT_NOP2 bound to: 5'b11011 
+	Parameter CMD_PALL bound to: 8'b10010001 
+	Parameter CMD_REF bound to: 8'b10001000 
+	Parameter CMD_NOP bound to: 8'b10111000 
+	Parameter CMD_MRS bound to: 8'b1000000x 
+	Parameter CMD_BACT bound to: 8'b10011xxx 
+	Parameter CMD_READ bound to: 8'b10101xx1 
+	Parameter CMD_WRIT bound to: 8'b10100xx1 
+INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_data' does not match port width (16) of module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:253]
+INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WDATA_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RDATA_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_EMPTY
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 626 ; free virtual = 10964
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 627 ; free virtual = 10965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 627 ; free virtual = 10965
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 716 ; free virtual = 11062
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7561.695 ; gain = 92.820 ; free physical = 588 ; free virtual = 10934
+refresh_design
+WARNING: [Synth 8-2490] overwriting previous definition of module AXIL_Slave_FSM [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module FIFO [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module sdram_controller [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-2490] overwriting previous definition of module fifo_sdram_cntrl [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:62]
+ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:66]
+INFO: [Synth 8-2350] module AXI2SDRAM ignored due to previous errors [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+Failed to read verilog '/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv'
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: AXI2SDRAM
+WARNING: [Synth 8-2490] overwriting previous definition of module AXIL_Slave_FSM [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module FIFO [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module sdram_controller [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-2490] overwriting previous definition of module fifo_sdram_cntrl [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:62]
+ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:66]
+INFO: [Synth 8-2350] module AXI2SDRAM ignored due to previous errors [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+Failed to read verilog '/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv'
+1 Infos, 6 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: AXI2SDRAM
+WARNING: [Synth 8-2490] overwriting previous definition of module AXIL_Slave_FSM [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module FIFO [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module sdram_controller [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+WARNING: [Synth 8-2490] overwriting previous definition of module fifo_sdram_cntrl [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+WARNING: [Synth 8-2490] overwriting previous definition of module async_fifo_1 [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 602 ; free virtual = 10963
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118]
+WARNING: [Synth 8-6014] Unused sequential element reg_wdata_reg was removed.  [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+	Parameter DATA_SIZE bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2]
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+	Parameter DEPTH bound to: 60 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5]
+WARNING: [Synth 8-7023] instance 'FIFO_inst' of module 'FIFO' has 33 connections declared, but only 29 given [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:173]
+INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+	Parameter ROW_WIDTH bound to: 13 - type: integer 
+	Parameter COL_WIDTH bound to: 9 - type: integer 
+	Parameter BANK_WIDTH bound to: 2 - type: integer 
+	Parameter SDRADDR_WIDTH bound to: 13 - type: integer 
+	Parameter HADDR_WIDTH bound to: 24 - type: integer 
+	Parameter CLK_FREQUENCY bound to: 133 - type: integer 
+	Parameter REFRESH_TIME bound to: 32 - type: integer 
+	Parameter REFRESH_COUNT bound to: 8192 - type: integer 
+	Parameter CYCLES_BETWEEN_REFRESH bound to: 519 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter INIT_NOP1 bound to: 5'b01000 
+	Parameter INIT_PRE1 bound to: 5'b01001 
+	Parameter INIT_NOP1_1 bound to: 5'b00101 
+	Parameter INIT_REF1 bound to: 5'b01010 
+	Parameter INIT_NOP2 bound to: 5'b01011 
+	Parameter INIT_REF2 bound to: 5'b01100 
+	Parameter INIT_NOP3 bound to: 5'b01101 
+	Parameter INIT_LOAD bound to: 5'b01110 
+	Parameter INIT_NOP4 bound to: 5'b01111 
+	Parameter REF_PRE bound to: 5'b00001 
+	Parameter REF_NOP1 bound to: 5'b00010 
+	Parameter REF_REF bound to: 5'b00011 
+	Parameter REF_NOP2 bound to: 5'b00100 
+	Parameter READ_ACT bound to: 5'b10000 
+	Parameter READ_NOP1 bound to: 5'b10001 
+	Parameter READ_CAS bound to: 5'b10010 
+	Parameter READ_NOP2 bound to: 5'b10011 
+	Parameter READ_READ bound to: 5'b10100 
+	Parameter WRIT_ACT bound to: 5'b11000 
+	Parameter WRIT_NOP1 bound to: 5'b11001 
+	Parameter WRIT_CAS bound to: 5'b11010 
+	Parameter WRIT_NOP2 bound to: 5'b11011 
+	Parameter CMD_PALL bound to: 8'b10010001 
+	Parameter CMD_REF bound to: 8'b10001000 
+	Parameter CMD_NOP bound to: 8'b10111000 
+	Parameter CMD_MRS bound to: 8'b1000000x 
+	Parameter CMD_BACT bound to: 8'b10011xxx 
+	Parameter CMD_READ bound to: 8'b10101xx1 
+	Parameter CMD_WRIT bound to: 8'b10100xx1 
+INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6]
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port WDATA_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RADDR_FIFO_EMPTY
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RDATA_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_FULL
+WARNING: [Synth 8-3331] design AXIL_Slave_FSM has unconnected port RW_FIFO_EMPTY
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 630 ; free virtual = 10991
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 633 ; free virtual = 10994
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 633 ; free virtual = 10994
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 626 ; free virtual = 10988
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7638.734 ; gain = 0.000 ; free physical = 563 ; free virtual = 10924
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7662.746 ; gain = 45.016 ; free physical = 513 ; free virtual = 10882
+20 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7662.746 ; gain = 45.016 ; free physical = 513 ; free virtual = 10882

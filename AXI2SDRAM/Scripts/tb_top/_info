@@ -1,0 +1,159 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts
+T_opt
+!s110 1723875681
+V>ik>iafIOR4fm7B7>FeOB1
+04 6 4 work tb_top fast 0
+=1-ac15a2303314-66c04160-bb0e3-16712
+o-quiet -auto_acc_if_foreign -work tb_top -L design +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+YAXI_Interface
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 DXx6 mtiUvm 7 uvm_pkg 0 22 3zPkj@YUcM=M^m3zCLh<H1
+Z4 DXx4 work 14 tb_top_sv_unit 0 22 oQN;5<3[2M1;ZK_WB59=V0
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 5BfTfzD;7cAoUlezCnA>:1
+I>lVa0k2lN_[SbZT6[<Mk83
+Z6 !s105 tb_top_sv_unit
+S1
+R0
+w1723752683
+8../DV/TB/../AXI/AXI_Interface.sv
+Z7 F../DV/TB/../AXI/AXI_Interface.sv
+L0 1
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1723875679.000000
+Z10 !s107 ../DV/TB/AXI_SDRAM_Test.sv|../DV/TB/AXI2SDRAM_Environment.sv|../DV/TB/AXI_SDRAM_Coverage.sv|../DV/TB/AXI_SDRAM_Scoreboard.sv|../DV/TB/../SDRAM/SDRAM_Agent.sv|../DV/TB/../SDRAM/SDRAM_Monitor.sv|../DV/TB/../SDRAM/SDRAM_Driver.sv|../DV/TB/../SDRAM/SDRAM_Sequencer.sv|../DV/TB/../SDRAM/SDRAM_Sequence.sv|../DV/TB/../SDRAM/SDRAM_base_Sequence.sv|../DV/TB/../SDRAM/SDRAM_Packet.sv|../DV/TB/../SDRAM/SDRAM_Interface.sv|../DV/TB/../AXI/AXI_Agent.sv|../DV/TB/../AXI/AXI_Monitor.sv|../DV/TB/../AXI/AXI_Driver.sv|../DV/TB/../AXI/AXI_Sequencer.sv|../DV/TB/../AXI/AXI_Sequence.sv|../DV/TB/../AXI/AXI_Base_Sequence.sv|../DV/TB/../AXI/AXI_Packet.sv|../DV/TB/../AXI/AXI_Interface.sv|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../DV/TB/AXI_SDRAM_Pkg.sv|../DV/TB/tb_top.sv|
+Z11 !s90 -work|tb_top|-vopt|-sv|+cover=sbceft1|-stats=none|../DV/TB/tb_top.sv|
+!i113 0
+Z12 !s102 +cover=sbceft1
+Z13 o-work tb_top -sv +cover=sbceft1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@x@i_@interface
+YSDRAM_Interface
+R2
+R3
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 V19gQd]bYdDAV[3;M9VWD0
+IAK^Wc6HH]P9LLNHf^>o8_3
+R6
+S1
+R0
+w1723667393
+8../DV/TB/../SDRAM/SDRAM_Interface.sv
+Z14 F../DV/TB/../SDRAM/SDRAM_Interface.sv
+L0 1
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+n@s@d@r@a@m_@interface
+vtb_top
+R2
+R3
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 8IdZBbcm4FA8YNh]H7``W0
+IIC5jz6K^WX>JDke@GQM0D3
+R6
+S1
+R0
+w1723840616
+Z15 8../DV/TB/tb_top.sv
+Z16 F../DV/TB/tb_top.sv
+L0 5
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+Xtb_top_sv_unit
+!s115 SDRAM_Interface
+!s115 AXI_Interface
+R2
+R3
+VoQN;5<3[2M1;ZK_WB59=V0
+r1
+!s85 0
+!i10b 1
+!s100 P_=XhNXohiWn29hmU0n0M1
+IoQN;5<3[2M1;ZK_WB59=V0
+!i103 1
+S1
+R0
+w1723875679
+R15
+R16
+F../DV/TB/AXI_SDRAM_Pkg.sv
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+F/home/vlsi/Chandrakant/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+R7
+F../DV/TB/../AXI/AXI_Packet.sv
+F../DV/TB/../AXI/AXI_Base_Sequence.sv
+F../DV/TB/../AXI/AXI_Sequence.sv
+F../DV/TB/../AXI/AXI_Sequencer.sv
+F../DV/TB/../AXI/AXI_Driver.sv
+F../DV/TB/../AXI/AXI_Monitor.sv
+F../DV/TB/../AXI/AXI_Agent.sv
+R14
+F../DV/TB/../SDRAM/SDRAM_Packet.sv
+F../DV/TB/../SDRAM/SDRAM_base_Sequence.sv
+F../DV/TB/../SDRAM/SDRAM_Sequence.sv
+F../DV/TB/../SDRAM/SDRAM_Sequencer.sv
+F../DV/TB/../SDRAM/SDRAM_Driver.sv
+F../DV/TB/../SDRAM/SDRAM_Monitor.sv
+F../DV/TB/../SDRAM/SDRAM_Agent.sv
+F../DV/TB/AXI_SDRAM_Scoreboard.sv
+F../DV/TB/AXI_SDRAM_Coverage.sv
+F../DV/TB/AXI2SDRAM_Environment.sv
+F../DV/TB/AXI_SDRAM_Test.sv
+L0 2
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1

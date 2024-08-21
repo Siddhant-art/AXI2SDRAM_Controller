@@ -1,0 +1,212 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts
+vasync_fifo
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 !s110 1723875679
+!i10b 1
+!s100 J>QHi^3N7VY4UTdY4m5VV1
+IPzoanjXhzE:?Nj_F:Md>l1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 AXI2SDRAM_Top_sv_unit
+S1
+R0
+w1723868748
+8../Design/AXI2SDRAM_Wrapper/async_fifo.v
+F../Design/AXI2SDRAM_Wrapper/async_fifo.v
+L0 2
+Z5 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z6 !s108 1723875679.000000
+!s107 ../Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv|../Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv|../Design/AXI2SDRAM_Wrapper/async_fifo_1.v|../Design/AXI2SDRAM_Wrapper/async_fifo.v|../Design/AXI2SDRAM_Wrapper/fifo.sv|../Design/AXI2SDRAM_Wrapper/axil_slave.sv|../Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv|
+Z7 !s90 -work|design|-vopt|-sv|+cover=sbceft1|-stats=none|../Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv|
+!i113 0
+Z8 !s102 +cover=sbceft1
+Z9 o-work design -sv +cover=sbceft1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+vasync_fifo_1
+R1
+R2
+!i10b 1
+!s100 L:12`T9Z?U_VJ`;GH71B_2
+I^om]c?CfSV1hR95oQbIB>2
+R3
+R4
+S1
+R0
+w1723822042
+8../Design/AXI2SDRAM_Wrapper/async_fifo_1.v
+F../Design/AXI2SDRAM_Wrapper/async_fifo_1.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+Z11 !s107 ../Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv|../Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv|../Design/AXI2SDRAM_Wrapper/async_fifo_1.v|../Design/AXI2SDRAM_Wrapper/async_fifo.v|../Design/AXI2SDRAM_Wrapper/fifo.sv|../Design/AXI2SDRAM_Wrapper/axil_slave.sv|../Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv|
+R7
+!i113 0
+R8
+R9
+R10
+vAXI2SDRAM
+R1
+R2
+!i10b 1
+!s100 9PBV4F`[5@mi74b8AeO:b2
+IV1m]>lX1U`6J2n4?JmE_h2
+R3
+R4
+S1
+R0
+w1723811861
+8../Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv
+F../Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv
+L0 6
+R5
+r1
+!s85 0
+31
+R6
+R11
+R7
+!i113 0
+R8
+R9
+R10
+n@a@x@i2@s@d@r@a@m
+vAXIL_Slave_FSM
+R1
+R2
+!i10b 1
+!s100 JN2?gMzdFPSi4oVcfM3>L1
+Ik0d`mH4CQBcTen31UjPfh1
+R3
+R4
+S1
+R0
+w1723837446
+8../Design/AXI2SDRAM_Wrapper/axil_slave.sv
+F../Design/AXI2SDRAM_Wrapper/axil_slave.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R11
+R7
+!i113 0
+R8
+R9
+R10
+n@a@x@i@l_@slave_@f@s@m
+vFIFO
+R1
+R2
+!i10b 1
+!s100 ZgGiYB=MY:R^Fb0XfFnnT0
+IPWYcT57;YYD8OVm9dD^Tk2
+R3
+R4
+S1
+R0
+w1723868768
+8../Design/AXI2SDRAM_Wrapper/fifo.sv
+F../Design/AXI2SDRAM_Wrapper/fifo.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+R11
+R7
+!i113 0
+R8
+R9
+R10
+n@f@i@f@o
+vfifo_sdram_cntrl
+R1
+R2
+!i10b 1
+!s100 VC?baX60aSV?LaPXX3PXR3
+IH2SD2kf8^L0EKjDQ0PG^01
+R3
+R4
+S1
+R0
+w1723833800
+8../Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv
+F../Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R11
+R7
+!i113 0
+R8
+R9
+R10
+vmt48lc16m16a2
+R1
+R2
+!i10b 1
+!s100 G2F?3>@zWHa_Z4m1P44EO3
+IYK1]ARdZhk;f2<;0Xl>>73
+R3
+!s105 mt48lc16m16a2_v_unit
+S1
+R0
+w1723579162
+8../Design/sdram_sim_model/mt48lc16m16a2.v
+F../Design/sdram_sim_model/mt48lc16m16a2.v
+L0 49
+R5
+r1
+!s85 0
+31
+R6
+!s107 ../Design/sdram_sim_model/timescale.v|../Design/sdram_sim_model/mt48lc16m16a2.v|
+!s90 -work|design|-vopt|-sv|-stats=none|../Design/sdram_sim_model/mt48lc16m16a2.v|
+!i113 0
+o-work design -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vsdram_controller
+R1
+R2
+!i10b 1
+!s100 H`NV`[m_eaDnB9HnIT<813
+INi9VCYLhTR;0haakhkRi[3
+R3
+R4
+S1
+R0
+w1723839819
+8../Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv
+F../Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv
+L0 25
+R5
+r1
+!s85 0
+31
+R6
+R11
+R7
+!i113 0
+R8
+R9
+R10

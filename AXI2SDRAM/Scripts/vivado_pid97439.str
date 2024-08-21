@@ -1,0 +1,405 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 97439
+License: Customer
+
+Current time: 	Fri Aug 16 06:25:54 IST 2024
+Time zone: 	India Standard Time (Asia/Kolkata)
+
+OS: Ubuntu
+OS Version: 5.19.0-46-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 7 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	vlsi
+User home directory: /home/vlsi
+User working directory: /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts
+User country: 	IN
+User language: 	en
+User locale: 	en_IN
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2019.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/vlsi/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/vlsi/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/vlsi/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/vivado.log
+Vivado journal file location: 	/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-97439-H510
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	186 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 982 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y (x, cr)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 80 MB (+81129kb) [00:00:06]
+// [Engine Memory]: 979 MB (+874838kb) [00:00:06]
+// [GUI Memory]: 92 MB (+8902kb) [00:00:06]
+// [GUI Memory]: 105 MB (+8243kb) [00:00:06]
+// [GUI Memory]: 116 MB (+6543kb) [00:00:07]
+// f (cr): New Project: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 992 MB. GUI used memory: 57 MB. Current time: 8/16/24, 6:25:55 AM IST
+selectButton("NEXT", "Next >"); // JButton (j, f)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "design_axi2sdaram", true); // ac (Q, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, f)
+// Elapsed time: 12 seconds
+String[] filenames31467 = {"/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv", "/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv"};
+setFileChooser(filenames31467);
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// bB (f):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1494 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project design_axi2sdaram /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Scripts/design_axi2sdaram -part xc7vx485tffg1157-1 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 1,036 MB (+8295kb) [00:00:45]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv /home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv} 
+selectButton("FINISH", "Finish"); // JButton (j, f)
+// 'g' command handler elapsed time: 40 seconds
+dismissDialog("Create Project"); // bB (f)
+dismissDialog("New Project"); // f (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,072 MB. GUI used memory: 59 MB. Current time: 8/16/24, 6:26:35 AM IST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 1,089 MB (+1590kb) [00:00:51]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cr)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7vx485tffg1157-1 Top: AXI2SDRAM 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,274 MB. GUI used memory: 59 MB. Current time: 8/16/24, 6:27:05 AM IST
+// [Engine Memory]: 1,309 MB (+173395kb) [00:01:24]
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,825 MB. GUI used memory: 59 MB. Current time: 8/16/24, 6:27:24 AM IST
+// [Engine Memory]: 1,826 MB (+473730kb) [00:01:37]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// [GUI Memory]: 128 MB (+5918kb) [00:01:38]
+// [Engine Memory]: 1,941 MB (+24965kb) [00:01:38]
+// Schematic: addNotify
+// [GUI Memory]: 148 MB (+14827kb) [00:01:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  1004 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7vx485tffg1157-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7115.285 ; gain = 208.609 ; free physical = 775 ; free virtual = 11105 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer  	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer  	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] 
+// Tcl Message: 	Parameter DATA_SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter HADDR_WIDTH bound to: 24 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7151.160 ; gain = 244.484 ; free physical = 818 ; free virtual = 11149 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7168.973 ; gain = 262.297 ; free physical = 816 ; free virtual = 11146 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7168.973 ; gain = 262.297 ; free physical = 816 ; free virtual = 11146 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7168.973 ; gain = 0.000 ; free physical = 808 ; free virtual = 11138 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7333.754 ; gain = 0.000 ; free physical = 724 ; free virtual = 11055 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 7457.078 ; gain = 550.402 ; free physical = 581 ; free virtual = 10923 
+// Tcl Message: 21 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 7457.078 ; gain = 805.254 ; free physical = 578 ; free virtual = 10923 
+// 'dQ' command handler elapsed time: 24 seconds
+// Elapsed time: 22 seconds
+dismissDialog("Open Elaborated Design"); // bB (cr)
+// Elapsed time: 35 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // H (aI, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 76 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 581 ; free virtual = 10919 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,949 MB. GUI used memory: 91 MB. Current time: 8/16/24, 6:29:24 AM IST
+// Engine heap size: 1,949 MB. GUI used memory: 92 MB. Current time: 8/16/24, 6:29:24 AM IST
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer  	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer  	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] 
+// Tcl Message: 	Parameter DATA_SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter HADDR_WIDTH bound to: 24 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 626 ; free virtual = 10964 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 627 ; free virtual = 10965 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 627 ; free virtual = 10965 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,016 MB. GUI used memory: 63 MB. Current time: 8/16/24, 6:29:25 AM IST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,041 MB (+2831kb) [00:03:38]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1047 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7468.875 ; gain = 0.000 ; free physical = 716 ; free virtual = 11062 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7561.695 ; gain = 92.820 ; free physical = 588 ; free virtual = 10934 
+dismissDialog("Reloading"); // bB (cr)
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // H (aI, cr)
+// PAPropertyPanels.initPanels (rd_data) elapsed time: 0.2s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,108 MB. GUI used memory: 95 MB. Current time: 8/16/24, 6:33:20 AM IST
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 250 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (ds, cr)
+// bB (cr):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FAIL
+// Tcl Message: ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:62] ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:66] 
+// Tcl Message: INFO: [Synth 8-2350] module AXI2SDRAM ignored due to previous errors [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: Failed to read verilog '/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv' ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.  
+// S (cr): Critical Messages: addNotify
+dismissDialog("Reloading"); // bB (cr)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,141 MB. GUI used memory: 95 MB. Current time: 8/16/24, 6:33:55 AM IST
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close : addNotify
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,142 MB. GUI used memory: 93 MB. Current time: 8/16/24, 6:33:59 AM IST
+// Engine heap size: 2,142 MB. GUI used memory: 93 MB. Current time: 8/16/24, 6:33:59 AM IST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // A (cr)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7vx485tffg1157-1 Top: AXI2SDRAM 
+// TclEventType: ELABORATE_FAIL
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:62] ERROR: [Synth 8-1031] HADDR_WIDTH is not declared [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:66] 
+// Tcl Message: INFO: [Synth 8-2350] module AXI2SDRAM ignored due to previous errors [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: Failed to read verilog '/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv' 
+// Tcl Message: 1 Infos, 6 Warnings, 0 Critical Warnings and 3 Errors encountered. synth_design failed 
+// Tcl Message: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details  
+// 'dQ' command handler elapsed time: 3 seconds
+// S (cr): Critical Messages: addNotify
+dismissDialog("Open Elaborated Design"); // bB (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 48 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (S)
+dismissDialog("Critical Messages"); // S (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // A (cr)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7vx485tffg1157-1 Top: AXI2SDRAM 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 2,153 MB (+10928kb) [00:09:13]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,153 MB. GUI used memory: 64 MB. Current time: 8/16/24, 6:35:00 AM IST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 602 ; free virtual = 10963 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXI2SDRAM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  	Parameter HADDR_WIDTH bound to: 24 - type: integer  	Parameter SDRAM_ADDR_WIDTH bound to: 13 - type: integer  	Parameter SDRAM_DATA_WIDTH bound to: 16 - type: integer  	Parameter SDRAM_BANK_WIDTH bound to: 2 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'AXIL_Slave_FSM' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter DATA_WIDTH bound to: 32 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:118] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'AXIL_Slave_FSM' (1#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/axil_slave.sv:1] INFO: [Synth 8-6157] synthesizing module 'FIFO' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'async_fifo' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] 
+// Tcl Message: 	Parameter DATA_SIZE bound to: 32 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (2#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo.v:2] INFO: [Synth 8-6157] synthesizing module 'async_fifo_1' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] 
+// Tcl Message: 	Parameter SIZE bound to: 32 - type: integer  	Parameter WIDTH bound to: 6 - type: integer  	Parameter DEPTH bound to: 60 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'async_fifo_1' (3#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/async_fifo_1.v:2] INFO: [Synth 8-6155] done synthesizing module 'FIFO' (4#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo.sv:5] 
+// Tcl Message: INFO: [Synth 8-6157] synthesizing module 'fifo_sdram_cntrl' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] 
+// Tcl Message: 	Parameter ADDR_WIDTH bound to: 32 - type: integer  	Parameter HADDR_WIDTH bound to: 24 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'fifo_sdram_cntrl' (5#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/fifo_sdram_controller.sv:1] INFO: [Synth 8-6157] synthesizing module 'sdram_controller' [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'sdram_controller' (6#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/SDRAM_Controller.sv:25] INFO: [Synth 8-6155] done synthesizing module 'AXI2SDRAM' (7#1) [/home/vlsi/Desktop/CDAC_Project/AXI2SDRAM/Design/AXI2SDRAM_Wrapper/AXI2SDRAM_Top.sv:6] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 630 ; free virtual = 10991 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 633 ; free virtual = 10994 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 633 ; free virtual = 10994 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7617.730 ; gain = 0.000 ; free physical = 626 ; free virtual = 10988 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers. 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7638.734 ; gain = 0.000 ; free physical = 563 ; free virtual = 10924 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7662.746 ; gain = 45.016 ; free physical = 513 ; free virtual = 10882 
+// Tcl Message: 20 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7662.746 ; gain = 45.016 ; free physical = 513 ; free virtual = 10882 
+// 'dQ' command handler elapsed time: 6 seconds
+dismissDialog("Open Elaborated Design"); // bB (cr)
+// Elapsed time: 15 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // H (aI, cr)
+// PAPropertyPanels.initPanels (AWVALID) elapsed time: 0.2s
+// [GUI Memory]: 157 MB (+1531kb) [00:09:33]
+// Elapsed time: 16 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 96 MB. Current time: 8/16/24, 7:05:00 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 90 MB. Current time: 8/16/24, 7:35:00 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 90 MB. Current time: 8/16/24, 8:05:00 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 89 MB. Current time: 8/16/24, 8:35:01 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 90 MB. Current time: 8/16/24, 9:05:01 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 90 MB. Current time: 8/16/24, 9:35:01 AM IST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,173 MB. GUI used memory: 90 MB. Current time: 8/16/24, 10:05:01 AM IST

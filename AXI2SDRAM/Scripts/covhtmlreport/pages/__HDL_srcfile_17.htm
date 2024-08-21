@@ -1,0 +1,42 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a><q-w>class</q-w> SDRAM_Packet <q-w>extends</q-w> uvm_sequence_item;
+<a name="2"><q-n>     2  </q-n></a>
+<a name="3"><q-n>     3  </q-n></a>         <q-w>bit</q-w>         RAS;
+<a name="4"><q-n>     4  </q-n></a>         <q-w>bit</q-w>         CAS;
+<a name="5"><q-n>     5  </q-n></a>         <q-w>bit</q-w>         CS;
+<a name="6"><q-n>     6  </q-n></a>         <q-w>bit</q-w>         WE;
+<a name="7"><q-n>     7  </q-n></a>         <q-w>bit</q-w> [12:0]  A;   <q-m>// needs to be change</q-m>
+<a name="8"><q-n>     8  </q-n></a>         <q-w>bit</q-w> [1:0 ]  BA;
+<a name="9"><q-n>     9  </q-n></a>         <q-w>bit</q-w> [1:0]   DQM;
+<a name="10"><q-n>     10  </q-n></a>   <q-w>rand</q-w>  <q-w>bit</q-w> [15:0]  DQ;
+<a name="11"><q-n>     11  </q-n></a>
+<a name="12"><q-n>     12  </q-n></a>    `uvm_object_utils_begin(SDRAM_Packet)
+<a name="13"><q-n>     13  </q-n></a>
+<a name="14"><q-n>     14  </q-n></a>    <q-m>// SDRAM Signals</q-m>
+<a name="15"><q-n>     15  </q-n></a>
+<a name="16"><q-n>     16  </q-n></a>     `uvm_field_int(RAS, UVM_HEX)
+<a name="17"><q-n>     17  </q-n></a>     `uvm_field_int(CAS, UVM_HEX)
+<a name="18"><q-n>     18  </q-n></a>     `uvm_field_int(CS, UVM_HEX)
+<a name="19"><q-n>     19  </q-n></a>     `uvm_field_int(WE, UVM_HEX)
+<a name="20"><q-n>     20  </q-n></a>     `uvm_field_int(A, UVM_HEX)
+<a name="21"><q-n>     21  </q-n></a>     `uvm_field_int(BA, UVM_HEX)
+<a name="22"><q-n>     22  </q-n></a>     `uvm_field_int(DQ, UVM_HEX)
+<a name="23"><q-n>     23  </q-n></a>     `uvm_field_int(DQM, UVM_HEX)
+<a name="24"><q-n>     24  </q-n></a>
+<a name="25"><q-n>     25  </q-n></a>	`uvm_object_utils_end
+<a name="26"><q-n>     26  </q-n></a>	
+<a name="27"><q-n>     27  </q-n></a><q-w>endclass</q-w> : SDRAM_Packet</pre>
+</tt>
+
+  
+</body>
+</html>

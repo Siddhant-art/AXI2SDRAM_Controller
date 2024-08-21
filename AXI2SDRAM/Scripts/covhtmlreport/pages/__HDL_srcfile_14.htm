@@ -1,0 +1,220 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a><q-w>class</q-w> AXI_Driver <q-w>extends</q-w> uvm_driver#(AXI_Packet);
+<a name="2"><q-n>     2  </q-n></a>
+<a name="3"><q-n>     3  </q-n></a>    `uvm_component_utils(AXI_Driver)
+<a name="4"><q-n>     4  </q-n></a>
+<a name="5"><q-n>     5  </q-n></a>	 <q-w>virtual</q-w> AXI_Interface axi_intf;
+<a name="6"><q-n>     6  </q-n></a>
+<a name="7"><q-n>     7  </q-n></a>	 AXI_Packet axi_pkt;
+<a name="8"><q-n>     8  </q-n></a>
+<a name="9"><q-n>     9  </q-n></a>	<q-w>function</q-w> <q-w>new</q-w> (<q-w>string</q-w> name, uvm_component parent);
+<a name="10"><q-n>     10  </q-n></a>		<q-w>super</q-w>.<q-w>new</q-w>(name, parent);
+<a name="11"><q-n>     11  </q-n></a>	<q-w>endfunction</q-w> : <q-w>new</q-w>
+<a name="12"><q-n>     12  </q-n></a>
+<a name="13"><q-n>     13  </q-n></a>	<q-w>function</q-w> <q-w>void</q-w> build_phase(uvm_phase phase);
+<a name="14"><q-n>     14  </q-n></a>		<q-w>super</q-w>.build_phase(phase);
+<a name="15"><q-n>     15  </q-n></a>		`uvm_info(get_full_name(),<q-l>"-------------------------AXI_Driver_build-------------------------------"</q-l>,UVM_NONE)
+<a name="16"><q-n>     16  </q-n></a>		<q-w>if</q-w>(!uvm_config_db#(<q-w>virtual</q-w> AXI_Interface)::get(<q-w>this</q-w>, <q-l>""</q-l>, <q-l>"a_vif"</q-l>, axi_intf))
+<a name="17"><q-n>     17  </q-n></a>       		`uvm_fatal(<q-l>"NO_VIF"</q-l>,{<q-l>"virtual interface must be set for: "</q-l>,get_full_name(),<q-l>".a_vif"</q-l>});
+<a name="18"><q-n>     18  </q-n></a>    <q-w>endfunction</q-w> : build_phase
+<a name="19"><q-n>     19  </q-n></a>
+<a name="20"><q-n>     20  </q-n></a>
+<a name="21"><q-n>     21  </q-n></a>
+<a name="22"><q-n>     22  </q-n></a>    <q-w>virtual</q-w> <q-w>task</q-w> run_phase(uvm_phase phase);
+<a name="23"><q-n>     23  </q-n></a>  		<q-w>super</q-w>.run_phase(phase);
+<a name="24"><q-n>     24  </q-n></a>  		drive_reset();
+<a name="25"><q-n>     25  </q-n></a>    	<q-w>forever</q-w> <q-w>begin</q-w>
+<a name="26"><q-n>     26  </q-n></a>      		seq_item_port.get_next_item(axi_pkt);
+<a name="27"><q-n>     27  </q-n></a>      		`uvm_info(get_full_name(),<q-l>"-------------------------AXI_Driver_packet#####-------------------------------"</q-l>,UVM_NONE)
+<a name="28"><q-n>     28  </q-n></a>      		<q-m>// axi_pkt.print();</q-m>
+<a name="29"><q-n>     29  </q-n></a>      		drive_axi_write();
+<a name="30"><q-n>     30  </q-n></a>      		drive_axi_read();
+<a name="31"><q-n>     31  </q-n></a>      		`uvm_info(get_full_name(),<q-l>"---------------------AXI_Packet_driven_on_interface#####----------------------------"</q-l>,UVM_NONE)
+<a name="32"><q-n>     32  </q-n></a>      		seq_item_port.item_done();
+<a name="33"><q-n>     33  </q-n></a>    	<q-w>end</q-w>
+<a name="34"><q-n>     34  </q-n></a>  	<q-w>endtask</q-w> : run_phase
+<a name="35"><q-n>     35  </q-n></a>
+<a name="36"><q-n>     36  </q-n></a>  	<q-m>// virtual task drive_axi_write();</q-m>
+<a name="37"><q-n>     37  </q-n></a>
+<a name="38"><q-n>     38  </q-n></a>   <q-m>//     @(posedge axi_intf.ACLK);</q-m>
+<a name="39"><q-n>     39  </q-n></a>    
+<a name="40"><q-n>     40  </q-n></a>	<q-m>//    // Write address channel signals</q-m>
+<a name="41"><q-n>     41  </q-n></a>
+<a name="42"><q-n>     42  </q-n></a>	<q-m>//     // Signal from TB to DUT</q-m>
+<a name="43"><q-n>     43  </q-n></a>	<q-m>//    // axi_intf.AWID    &lt;= axi_pkt.AWID;            //signal for AXI4_lite</q-m>
+<a name="44"><q-n>     44  </q-n></a>	<q-m>//    axi_intf.AWADDR  &lt;= axi_pkt.AWADDR;</q-m>
+<a name="45"><q-n>     45  </q-n></a>	<q-m>//    // axi_intf.AWLEN   &lt;= axi_pkt.AWLEN;</q-m>
+<a name="46"><q-n>     46  </q-n></a>	<q-m>//    // axi_intf.AWSIZE  &lt;= axi_pkt.AWSIZE;</q-m>
+<a name="47"><q-n>     47  </q-n></a>	<q-m>//    // axi_intf.AWBURST &lt;= axi_pkt.AWBURST;</q-m>
+<a name="48"><q-n>     48  </q-n></a>	<q-m>//    // axi_intf.AWLOCK  &lt;= axi_pkt.AWLOCK;</q-m>
+<a name="49"><q-n>     49  </q-n></a>	<q-m>//    // axi_intf.AWCACHE &lt;= axi_pkt.AWCACHE;  </q-m>
+<a name="50"><q-n>     50  </q-n></a>	<q-m>//    // axi_intf.AWPROT  &lt;= axi_pkt.AWPROT;</q-m>
+<a name="51"><q-n>     51  </q-n></a>	<q-m>//    axi_intf.AWVALID &lt;= axi_pkt.AWVALID;</q-m>
+<a name="52"><q-n>     52  </q-n></a>
+<a name="53"><q-n>     53  </q-n></a>	<q-m>//    // Signal from DUT to TB</q-m>
+<a name="54"><q-n>     54  </q-n></a>	<q-m>//    axi_pkt.AWREADY  &lt;= axi_intf.AWREADY;</q-m>
+<a name="55"><q-n>     55  </q-n></a>
+<a name="56"><q-n>     56  </q-n></a>	<q-m>//    // Write data channel signals</q-m>
+<a name="57"><q-n>     57  </q-n></a>
+<a name="58"><q-n>     58  </q-n></a>	<q-m>//     // Signal from TB to DUT</q-m>
+<a name="59"><q-n>     59  </q-n></a>	<q-m>//    // axi_intf.WID     &lt;= axi_pkt.WID;</q-m>
+<a name="60"><q-n>     60  </q-n></a>	<q-m>//    axi_intf.WDATA   &lt;= axi_pkt.WDATA;</q-m>
+<a name="61"><q-n>     61  </q-n></a>	<q-m>//    axi_intf.WSTRB   &lt;= axi_pkt.WSTRB;</q-m>
+<a name="62"><q-n>     62  </q-n></a>	<q-m>//    // axi_intf.WLAST   &lt;= axi_pkt.WLAST;</q-m>
+<a name="63"><q-n>     63  </q-n></a>	<q-m>//    axi_intf.WVALID  &lt;= axi_pkt.WVALID;</q-m>
+<a name="64"><q-n>     64  </q-n></a>
+<a name="65"><q-n>     65  </q-n></a>	<q-m>//     // Signal from DUT to TB</q-m>
+<a name="66"><q-n>     66  </q-n></a>	<q-m>//    axi_pkt.WREADY   &lt;= axi_intf.WREADY;</q-m>
+<a name="67"><q-n>     67  </q-n></a>
+<a name="68"><q-n>     68  </q-n></a>	<q-m>//    // Write response channel signals</q-m>
+<a name="69"><q-n>     69  </q-n></a>
+<a name="70"><q-n>     70  </q-n></a>	<q-m>//     // Signal from DUT to TB</q-m>
+<a name="71"><q-n>     71  </q-n></a>	<q-m>//    // axi_pkt.BID     &lt;=  axi_intf.BID;</q-m>
+<a name="72"><q-n>     72  </q-n></a>	<q-m>//    axi_pkt.BRESP   &lt;=  axi_intf.BRESP;   </q-m>
+<a name="73"><q-n>     73  </q-n></a>	<q-m>//    axi_pkt.BVALID  &lt;=  axi_intf.BVALID;</q-m>
+<a name="74"><q-n>     74  </q-n></a>
+<a name="75"><q-n>     75  </q-n></a>   <q-m>//      // Signal from TB to DUT</q-m>
+<a name="76"><q-n>     76  </q-n></a>	<q-m>//    axi_intf.BREADY &lt;=  axi_pkt.BREADY;</q-m>
+<a name="77"><q-n>     77  </q-n></a>
+<a name="78"><q-n>     78  </q-n></a>   <q-m>//    	// `uvm_info(get_full_name(),"-------------------------Packet_sent-------------------------------",UVM_NONE)</q-m>
+<a name="79"><q-n>     79  </q-n></a>   <q-m>//  endtask</q-m>
+<a name="80"><q-n>     80  </q-n></a>
+<a name="81"><q-n>     81  </q-n></a>   <q-m>//  virtual task drive_axi_read();</q-m>
+<a name="82"><q-n>     82  </q-n></a>
+<a name="83"><q-n>     83  </q-n></a>   <q-m>//     @(posedge axi_intf.ACLK);</q-m>
+<a name="84"><q-n>     84  </q-n></a>	<q-m>//    // Read address channel signals</q-m>
+<a name="85"><q-n>     85  </q-n></a>
+<a name="86"><q-n>     86  </q-n></a>	<q-m>//     // Signal from TB to DUT</q-m>
+<a name="87"><q-n>     87  </q-n></a>	<q-m>//    // axi_intf.ARID    &lt;= axi_pkt.ARID;</q-m>
+<a name="88"><q-n>     88  </q-n></a>	<q-m>//    axi_intf.ARADDR  &lt;= axi_pkt.ARADDR;</q-m>
+<a name="89"><q-n>     89  </q-n></a>	<q-m>//    // axi_intf.ARLEN   &lt;= axi_pkt.ARLEN;</q-m>
+<a name="90"><q-n>     90  </q-n></a>	<q-m>//    // axi_intf.ARSIZE  &lt;= axi_pkt.ARSIZE;</q-m>
+<a name="91"><q-n>     91  </q-n></a>	<q-m>//    // axi_intf.ARBURST &lt;= axi_pkt.ARBURST;</q-m>
+<a name="92"><q-n>     92  </q-n></a>	<q-m>//    // axi_intf.ARLOCK  &lt;= axi_pkt.ARLOCK;</q-m>
+<a name="93"><q-n>     93  </q-n></a>	<q-m>//    // axi_intf.ARCACHE &lt;= axi_pkt.ARCACHE; </q-m>
+<a name="94"><q-n>     94  </q-n></a>	<q-m>//    // axi_intf.ARPROT  &lt;= axi_pkt.ARPROT;</q-m>
+<a name="95"><q-n>     95  </q-n></a>	<q-m>//    axi_intf.ARVALID &lt;= axi_pkt.ARVALID;</q-m>
+<a name="96"><q-n>     96  </q-n></a>
+<a name="97"><q-n>     97  </q-n></a>   <q-m>//       // Signal from DUT to TB</q-m>
+<a name="98"><q-n>     98  </q-n></a>	<q-m>//    axi_pkt.ARREADY  &lt;=  axi_intf.ARREADY;</q-m>
+<a name="99"><q-n>     99  </q-n></a>
+<a name="100"><q-n>     100  </q-n></a>	<q-m>//    // Read data channel signals</q-m>
+<a name="101"><q-n>     101  </q-n></a>
+<a name="102"><q-n>     102  </q-n></a>	<q-m>//     // Signal from DUT to TB</q-m>
+<a name="103"><q-n>     103  </q-n></a>	<q-m>//    // axi_pkt.RID      &lt;= axi_intf.RID ;</q-m>
+<a name="104"><q-n>     104  </q-n></a>	<q-m>//    axi_pkt.RDATA    &lt;= axi_intf.RDATA ;</q-m>
+<a name="105"><q-n>     105  </q-n></a>	<q-m>//    axi_pkt.RRESP    &lt;= axi_intf.RRESP;</q-m>
+<a name="106"><q-n>     106  </q-n></a>	<q-m>//    // axi_pkt.RLAST    &lt;= axi_intf.RLAST;</q-m>
+<a name="107"><q-n>     107  </q-n></a>	<q-m>//    axi_pkt.RVALID   &lt;= axi_intf.RVALID ;</q-m>
+<a name="108"><q-n>     108  </q-n></a>
+<a name="109"><q-n>     109  </q-n></a>   <q-m>//       // Signal from TB to DUT</q-m>
+<a name="110"><q-n>     110  </q-n></a>	<q-m>//    axi_intf.RREADY &lt;=  axi_pkt.RREADY;</q-m>
+<a name="111"><q-n>     111  </q-n></a>
+<a name="112"><q-n>     112  </q-n></a>   <q-m>//    	// `uvm_info(get_full_name(),"-------------------------Packet_sent-------------------------------",UVM_NONE)</q-m>
+<a name="113"><q-n>     113  </q-n></a>   <q-m>//  endtask</q-m>
+<a name="114"><q-n>     114  </q-n></a>
+<a name="115"><q-n>     115  </q-n></a>   <q-w>virtual</q-w> <q-w>task</q-w> drive_reset();
+<a name="116"><q-n>     116  </q-n></a>      
+<a name="117"><q-n>     117  </q-n></a>          <q-m>// IDLE State</q-m>
+<a name="118"><q-n>     118  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="119"><q-n>     119  </q-n></a>
+<a name="120"><q-n>     120  </q-n></a>         axi_intf.AWADDR  &lt;= 0;
+<a name="121"><q-n>     121  </q-n></a>         axi_intf.AWVALID &lt;= 0;
+<a name="122"><q-n>     122  </q-n></a>         axi_intf.WDATA   &lt;= 0;
+<a name="123"><q-n>     123  </q-n></a>         axi_intf.WVALID  &lt;= 0;
+<a name="124"><q-n>     124  </q-n></a>         axi_intf.BREADY  &lt;= 0;
+<a name="125"><q-n>     125  </q-n></a>
+<a name="126"><q-n>     126  </q-n></a>         <q-m>// Address </q-m>
+<a name="127"><q-n>     127  </q-n></a>       <q-m>// @(posedge axi_intf.ACLK);</q-m>
+<a name="128"><q-n>     128  </q-n></a>
+<a name="129"><q-n>     129  </q-n></a>       <q-m>//   // Data</q-m>
+<a name="130"><q-n>     130  </q-n></a>       <q-m>// @(posedge axi_intf.ACLK);</q-m>
+<a name="131"><q-n>     131  </q-n></a>
+<a name="132"><q-n>     132  </q-n></a>
+<a name="133"><q-n>     133  </q-n></a>       <q-m>// @(posedge axi_intf.ACLK);</q-m>
+<a name="134"><q-n>     134  </q-n></a>
+<a name="135"><q-n>     135  </q-n></a>
+<a name="136"><q-n>     136  </q-n></a>   <q-w>endtask</q-w>
+<a name="137"><q-n>     137  </q-n></a>
+<a name="138"><q-n>     138  </q-n></a>
+<a name="139"><q-n>     139  </q-n></a>   <q-w>virtual</q-w> <q-w>task</q-w> drive_axi_write();
+<a name="140"><q-n>     140  </q-n></a>      
+<a name="141"><q-n>     141  </q-n></a>          <q-m>// IDLE State</q-m>
+<a name="142"><q-n>     142  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="143"><q-n>     143  </q-n></a>
+<a name="144"><q-n>     144  </q-n></a>         axi_intf.AWADDR  &lt;= 0;
+<a name="145"><q-n>     145  </q-n></a>         axi_intf.AWVALID &lt;= 0;
+<a name="146"><q-n>     146  </q-n></a>         axi_intf.WDATA   &lt;= 0;
+<a name="147"><q-n>     147  </q-n></a>         axi_intf.WVALID  &lt;= 0;
+<a name="148"><q-n>     148  </q-n></a>         axi_intf.BREADY  &lt;= 0;
+<a name="149"><q-n>     149  </q-n></a>
+<a name="150"><q-n>     150  </q-n></a>         <q-m>// Address </q-m>
+<a name="151"><q-n>     151  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="152"><q-n>     152  </q-n></a>   
+<a name="153"><q-n>     153  </q-n></a>         axi_intf.AWADDR  &lt;= axi_pkt.AWADDR;
+<a name="154"><q-n>     154  </q-n></a>         axi_intf.AWVALID &lt;= axi_pkt.AWVALID;
+<a name="155"><q-n>     155  </q-n></a>
+<a name="156"><q-n>     156  </q-n></a>         <q-m>// Data</q-m>
+<a name="157"><q-n>     157  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="158"><q-n>     158  </q-n></a>
+<a name="159"><q-n>     159  </q-n></a>         axi_intf.WDATA  &lt;= axi_pkt.WDATA;
+<a name="160"><q-n>     160  </q-n></a>         axi_intf.WVALID &lt;= axi_pkt.WVALID;
+<a name="161"><q-n>     161  </q-n></a>         axi_intf.BREADY &lt;= axi_pkt.WVALID;
+<a name="162"><q-n>     162  </q-n></a>
+<a name="163"><q-n>     163  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="164"><q-n>     164  </q-n></a>
+<a name="165"><q-n>     165  </q-n></a>         axi_intf.AWADDR  &lt;= 0;
+<a name="166"><q-n>     166  </q-n></a>         axi_intf.AWVALID &lt;= 0;
+<a name="167"><q-n>     167  </q-n></a>         axi_intf.WDATA   &lt;= 0;
+<a name="168"><q-n>     168  </q-n></a>         axi_intf.WVALID  &lt;= 0;
+<a name="169"><q-n>     169  </q-n></a>         axi_intf.BREADY  &lt;= 0;
+<a name="170"><q-n>     170  </q-n></a>
+<a name="171"><q-n>     171  </q-n></a>   <q-w>endtask</q-w>
+<a name="172"><q-n>     172  </q-n></a>
+<a name="173"><q-n>     173  </q-n></a>
+<a name="174"><q-n>     174  </q-n></a>   <q-w>virtual</q-w> <q-w>task</q-w> drive_axi_read();
+<a name="175"><q-n>     175  </q-n></a>    
+<a name="176"><q-n>     176  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="177"><q-n>     177  </q-n></a>   
+<a name="178"><q-n>     178  </q-n></a>        axi_intf.ARADDR  &lt;= 0;
+<a name="179"><q-n>     179  </q-n></a>        axi_intf.ARVALID &lt;= 1;
+<a name="180"><q-n>     180  </q-n></a>        axi_intf.RDATA   &lt;= 0;
+<a name="181"><q-n>     181  </q-n></a>        axi_intf.RVALID  &lt;= 0;
+<a name="182"><q-n>     182  </q-n></a>
+<a name="183"><q-n>     183  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="184"><q-n>     184  </q-n></a>
+<a name="185"><q-n>     185  </q-n></a>        axi_intf.ARADDR  &lt;= axi_pkt.ARADDR;
+<a name="186"><q-n>     186  </q-n></a>        axi_intf.ARVALID &lt;= axi_pkt.ARVALID;
+<a name="187"><q-n>     187  </q-n></a>
+<a name="188"><q-n>     188  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="189"><q-n>     189  </q-n></a>
+<a name="190"><q-n>     190  </q-n></a>        axi_intf.RDATA   &lt;= axi_pkt.RDATA;
+<a name="191"><q-n>     191  </q-n></a>        axi_intf.RVALID  &lt;= axi_pkt.RVALID;
+<a name="192"><q-n>     192  </q-n></a>        axi_intf.RRESP   &lt;= axi_pkt.RRESP;
+<a name="193"><q-n>     193  </q-n></a>
+<a name="194"><q-n>     194  </q-n></a>       @(<q-a>posedge</q-w> axi_intf.ACLK)
+<a name="195"><q-n>     195  </q-n></a> 
+<a name="196"><q-n>     196  </q-n></a>        axi_intf.ARADDR  &lt;= 0;
+<a name="197"><q-n>     197  </q-n></a>        axi_intf.ARVALID &lt;= 0;
+<a name="198"><q-n>     198  </q-n></a>        axi_intf.RDATA   &lt;= 0;
+<a name="199"><q-n>     199  </q-n></a>        axi_intf.RVALID  &lt;= 0;
+<a name="200"><q-n>     200  </q-n></a>
+<a name="201"><q-n>     201  </q-n></a>   <q-w>endtask</q-w>
+<a name="202"><q-n>     202  </q-n></a>
+<a name="203"><q-n>     203  </q-n></a><q-w>endclass</q-w> : AXI_Driver
+<a name="204"><q-n>     204  </q-n></a>
+</pre>
+</tt>
+
+  
+</body>
+</html>

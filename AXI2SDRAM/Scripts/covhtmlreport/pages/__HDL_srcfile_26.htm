@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a><q-w>class</q-w> AXI2SDRAM_Environment <q-w>extends</q-w> uvm_env;
+<a name="2"><q-n>     2  </q-n></a>
+<a name="3"><q-n>     3  </q-n></a>	`uvm_component_utils(AXI2SDRAM_Environment)
+<a name="4"><q-n>     4  </q-n></a>
+<a name="5"><q-n>     5  </q-n></a>	AXI_Agent   axi_agt;
+<a name="6"><q-n>     6  </q-n></a>	SDRAM_Agent sdram_agt;
+<a name="7"><q-n>     7  </q-n></a>	AXI_SDRAM_Scoreboard axi_sd_scb;
+<a name="8"><q-n>     8  </q-n></a>	AXI_SDRAM_Coverage axi_sd_cvg;
+<a name="9"><q-n>     9  </q-n></a>	
+<a name="10"><q-n>     10  </q-n></a>    <q-w>function</q-w> <q-w>new</q-w> (<q-w>string</q-w> name, uvm_component parent);
+<a name="11"><q-n>     11  </q-n></a>		<q-w>super</q-w>.<q-w>new</q-w>(name, parent);
+<a name="12"><q-n>     12  </q-n></a>	<q-w>endfunction</q-w> : <q-w>new</q-w>
+<a name="13"><q-n>     13  </q-n></a>
+<a name="14"><q-n>     14  </q-n></a>	<q-w>function</q-w> <q-w>void</q-w> build_phase(uvm_phase phase);
+<a name="15"><q-n>     15  </q-n></a>		<q-w>super</q-w>.build_phase(phase);
+<a name="16"><q-n>     16  </q-n></a>		`uvm_info(get_full_name(),<q-l>"-------------------------AXI2SDRAM_Environment_build-------------------------------"</q-l>,UVM_NONE)
+<a name="17"><q-n>     17  </q-n></a>		axi_agt   = AXI_Agent::type_id::create(<q-l>"axi_agt"</q-l>, <q-w>this</q-w>);
+<a name="18"><q-n>     18  </q-n></a>		sdram_agt = SDRAM_Agent::type_id::create(<q-l>"sdram_agt"</q-l>, <q-w>this</q-w>);
+<a name="19"><q-n>     19  </q-n></a>		axi_sd_scb = AXI_SDRAM_Scoreboard::type_id::create(<q-l>"axi_sd_scb"</q-l>, <q-w>this</q-w>);	
+<a name="20"><q-n>     20  </q-n></a>		axi_sd_cvg = AXI_SDRAM_Coverage::type_id::create(<q-l>"axi_sd_cvg"</q-l>, <q-w>this</q-w>);	
+<a name="21"><q-n>     21  </q-n></a>	<q-w>endfunction</q-w> : build_phase
+<a name="22"><q-n>     22  </q-n></a>
+<a name="23"><q-n>     23  </q-n></a>	<q-w>function</q-w> <q-w>void</q-w> connect_phase(uvm_phase phase);
+<a name="24"><q-n>     24  </q-n></a>      <q-w>super</q-w>.connect_phase(phase);
+<a name="25"><q-n>     25  </q-n></a>      axi_agt.axi_mon.item_collected_port.connect(axi_sd_scb.analysis_imp_a);
+<a name="26"><q-n>     26  </q-n></a>      sdram_agt.sdm_mon.item_collected_port.connect(axi_sd_scb.analysis_imp_b);
+<a name="27"><q-n>     27  </q-n></a>      axi_agt.axi_mon.item_collected_port.connect(axi_sd_cvg.analysis_imp_c);
+<a name="28"><q-n>     28  </q-n></a>      sdram_agt.sdm_mon.item_collected_port.connect(axi_sd_cvg.analysis_imp_d);
+<a name="29"><q-n>     29  </q-n></a>    <q-w>endfunction</q-w>
+<a name="30"><q-n>     30  </q-n></a>	
+<a name="31"><q-n>     31  </q-n></a><q-w>endclass</q-w> : AXI2SDRAM_Environment
+</pre>
+</tt>
+
+  
+</body>
+</html>
